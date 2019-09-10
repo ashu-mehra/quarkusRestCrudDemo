@@ -36,7 +36,7 @@ public class FruitResource {
 
     @GET
     public Fruit[] get() {
-//        System.out.println(new SimpleDateFormat("HH:mm:ss.SSS").format(new Date()));
+        System.out.println("End="+new SimpleDateFormat("HH:mm:ss.SSS").format(new Date()));
         return entityManager.createNamedQuery("Fruits.findAll", Fruit.class)
               .getResultList().toArray(new Fruit[0]);
     }
